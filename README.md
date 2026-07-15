@@ -75,3 +75,23 @@ Esto obliga a los celulares a descargar la versión nueva.
 ## Importante
 
 La página no envía mensajes automáticamente. Abre WhatsApp con el pedido completo y el cliente confirma tocando **Enviar**. No requiere servidor, base de datos ni pagos mensuales.
+
+
+## Vista previa al compartir por WhatsApp
+
+El sitio incluye `og-catalogo.png` y etiquetas Open Graph en `index.html`.
+
+Para actualizar esta versión en GitHub:
+
+1. Reemplazar `index.html`.
+2. Reemplazar `sw.js`.
+3. Subir `og-catalogo.png`.
+4. Esperar unos minutos y volver a compartir el enlace.
+
+WhatsApp puede conservar una vista previa anterior en caché. En ese caso, probá compartir temporalmente:
+
+```text
+https://lacroxruy.github.io/catalogo-la-minga/?v=2
+```
+
+El parámetro no cambia la página; solo ayuda a forzar una nueva lectura de la vista previa.
