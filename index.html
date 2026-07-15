@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#096b32">
+  <meta name="description" content="Catálogo de productos La Minga · Bonsai. Armá tu carrito y enviá el pedido por WhatsApp.">
+  <title>La Minga · Catálogo 2026</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="Ir al inicio">
+      <span class="brand-mark" aria-hidden="true">♻</span>
+      <span>
+        <small>COOPERATIVA</small>
+        <strong>La Minga</strong>
+      </span>
+      <span class="brand-divider"></span>
+      <span class="bonsai">Bonsai</span>
+    </a>
+
+    <button class="cart-button" id="openCart" type="button" aria-label="Abrir carrito">
+      <span aria-hidden="true">🛒</span>
+      <span>Carrito</span>
+      <b id="cartCount">0</b>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow">LISTA DE PRECIOS 2026</span>
+        <h1>Todo para tu hogar<br><em>en un solo lugar</em></h1>
+        <p>Calidad, precios justos y el mejor servicio.</p>
+        <div class="hero-actions">
+          <a class="primary-link" href="#catalogo">Ver productos</a>
+          <a class="secondary-link" href="https://wa.me/59899370519" target="_blank" rel="noopener">Consultar</a>
+        </div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <span>🧴</span><span>🧹</span><span>🪣</span><span>🧽</span>
+      </div>
+    </section>
+
+    <section class="benefits" aria-label="Beneficios">
+      <article><span>🚚</span><div><b>Envíos a domicilio</b><small>Sin costo</small></div></article>
+      <article><span>🛒</span><div><b>Compra mínima</b><small>$500</small></div></article>
+      <article><span>💬</span><div><b>Pedidos por WhatsApp</b><small>099 370 519</small></div></article>
+    </section>
+
+    <section class="catalog-section" id="catalogo">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">CATÁLOGO</span>
+          <h2>Elegí tus productos</h2>
+        </div>
+        <p id="resultCount"></p>
+      </div>
+
+      <div class="filters">
+        <label class="search-box">
+          <span aria-hidden="true">⌕</span>
+          <input id="searchInput" type="search" placeholder="Buscar detergente, balde, esponja…" autocomplete="off">
+        </label>
+        <label class="select-box">
+          <span class="sr-only">Categoría</span>
+          <select id="categorySelect">
+            <option value="">Todas las categorías</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="category-chips" id="categoryChips" aria-label="Filtrar por categoría"></div>
+      <div class="products-grid" id="productsGrid"></div>
+
+      <div class="empty-state" id="emptyState" hidden>
+        <span>🔎</span>
+        <h3>No encontramos productos</h3>
+        <p>Probá con otra búsqueda o categoría.</p>
+      </div>
+    </section>
+
+    <section class="local-banner">
+      <div>
+        <span>♻</span>
+        <p><b>Reciclamos nuestros envases</b><br>Guardalos y los retiramos en tu próxima compra.</p>
+      </div>
+      <strong>¡Apoyá lo local!</strong>
+    </section>
+  </main>
+
+  <footer>
+    <p><b>Cooperativa La Minga · Bonsai</b></p>
+    <p>Pedidos: <a href="https://wa.me/59899370519" target="_blank" rel="noopener">099 370 519</a></p>
+    <small id="priceNotice"></small>
+  </footer>
+
+  <div class="drawer-backdrop" id="cartBackdrop" hidden></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-hidden="true" aria-labelledby="cartTitle">
+    <div class="drawer-header">
+      <div>
+        <span class="eyebrow">TU PEDIDO</span>
+        <h2 id="cartTitle">Carrito</h2>
+      </div>
+      <button class="icon-button" id="closeCart" type="button" aria-label="Cerrar carrito">✕</button>
+    </div>
+
+    <div class="cart-content">
+      <div id="cartItems" class="cart-items"></div>
+
+      <div class="cart-empty" id="cartEmpty">
+        <span>🛒</span>
+        <h3>Tu carrito está vacío</h3>
+        <p>Agregá productos para comenzar el pedido.</p>
+        <button class="secondary-button" id="continueShopping" type="button">Ver catálogo</button>
+      </div>
+
+      <div id="checkoutArea" hidden>
+        <div class="minimum-box">
+          <div class="minimum-line">
+            <span id="minimumText"></span>
+            <b id="minimumAmount"></b>
+          </div>
+          <div class="progress-track"><div id="minimumProgress"></div></div>
+        </div>
+
+        <div class="totals">
+          <span>Subtotal</span>
+          <strong id="cartTotal">$0</strong>
+        </div>
+
+        <form id="orderForm">
+          <h3>Datos del pedido</h3>
+          <label>
+            Nombre *
+            <input id="customerName" type="text" required maxlength="80" autocomplete="name" placeholder="Tu nombre">
+          </label>
+
+          <label>
+            Entrega
+            <select id="deliveryType">
+              <option value="Envío a domicilio">Envío a domicilio</option>
+              <option value="Retiro coordinado">Retiro coordinado</option>
+            </select>
+          </label>
+
+          <label id="addressLabel">
+            Dirección *
+            <input id="customerAddress" type="text" required maxlength="140" autocomplete="street-address" placeholder="Calle, número y barrio">
+          </label>
+
+          <label>
+            Forma de pago
+            <select id="paymentType">
+              <option value="A coordinar">A coordinar</option>
+              <option value="Efectivo">Efectivo</option>
+              <option value="Transferencia">Transferencia</option>
+            </select>
+          </label>
+
+          <label>
+            Comentarios
+            <textarea id="customerNotes" rows="3" maxlength="300" placeholder="Horario, referencias o aclaraciones"></textarea>
+          </label>
+
+          <button class="whatsapp-button" id="sendWhatsApp" type="submit">
+            <span aria-hidden="true">💬</span>
+            Enviar pedido por WhatsApp
+          </button>
+          <button class="copy-button" id="copyOrder" type="button">Copiar pedido</button>
+          <p class="form-note">WhatsApp abrirá el mensaje preparado. El cliente debe tocar “Enviar”.</p>
+        </form>
+      </div>
+    </div>
+  </aside>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="config.js"></script>
+  <script src="productos.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

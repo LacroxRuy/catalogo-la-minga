@@ -1,0 +1,17 @@
+{
+  "name": "Catálogo La Minga · Bonsai",
+  "short_name": "La Minga",
+  "description": "Catálogo con carrito y pedidos por WhatsApp.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f7f9f7",
+  "theme_color": "#096b32",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
