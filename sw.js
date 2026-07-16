@@ -1,4 +1,4 @@
-const CACHE = "la-minga-catalogo-v2";
+const CACHE = "la-minga-catalogo-v3";
 const ASSETS = [
   "./",
   "./index.html",
@@ -8,7 +8,8 @@ const ASSETS = [
   "./app.js",
   "./manifest.webmanifest",
   "./icon.svg",
-  "./og-catalogo.png"
+  "./og-catalogo.png",
+  "./iconos-productos.svg"
 ];
 
 self.addEventListener("install", event => {

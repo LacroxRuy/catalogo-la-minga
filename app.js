@@ -158,7 +158,11 @@
       card.className = "product-card";
       card.innerHTML = `
         ${product.novedad ? '<span class="new-badge">NUEVO</span>' : ""}
-        <div class="product-icon" aria-hidden="true">${categoryIcons[product.categoria] || "🛍️"}</div>
+        <div class="product-icon" aria-hidden="true">
+          <svg class="product-svg" viewBox="0 0 64 64" focusable="false">
+            <use href="iconos-productos.svg#${product.icono || "generic"}"></use>
+          </svg>
+        </div>
         <span class="product-category">${escapeHtml(product.categoria)}</span>
         <h3>${escapeHtml(product.nombre)}</h3>
         <div class="product-footer">
