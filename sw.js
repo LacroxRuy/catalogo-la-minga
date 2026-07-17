@@ -1,4 +1,4 @@
-const CACHE = "la-minga-back-zoom-v13";
+const CACHE = "la-minga-whatsapp-preview-v14";
 
 const CORE_ASSETS = [
   "./",
@@ -10,6 +10,7 @@ const CORE_ASSETS = [
   "./manifest.webmanifest",
   "./icon.svg",
   "./og-catalogo.png",
+  "./og-la-minga-v2.png",
   "./logo-la-minga.png",
   "./DESTACADOS.csv",
   "./imagenes-productos/productos/sin-imagen.webp"
