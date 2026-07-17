@@ -864,11 +864,25 @@ html body [hidden] {
 .promo-slide { position: relative; }
 .promo-slide img { cursor: zoom-in; pointer-events: auto; }
 .open-news-image {
-  position: absolute; z-index: 6; top: 18px; right: 18px;
-  width: 46px; height: 46px; display: grid; place-items: center;
-  border: 0; border-radius: 50%; background: rgba(7,52,27,.88);
-  color: white; cursor: pointer; font-size: 22px;
-  box-shadow: 0 10px 26px rgba(0,0,0,.20); backdrop-filter: blur(8px);
+  position: absolute;
+  z-index: 6;
+  right: 18px;
+  bottom: 18px;
+  min-height: 44px;
+  padding: 0 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 1px solid rgba(255,255,255,.32);
+  border-radius: 999px;
+  background: rgba(7, 52, 27, .90);
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 900;
+  box-shadow: 0 10px 26px rgba(0,0,0,.24);
+  backdrop-filter: blur(8px);
 }
 .open-news-image:hover { transform: scale(1.05); background: var(--green); }
 .image-viewer { position: fixed; inset: 0; z-index: 200; display: grid; place-items: center; }

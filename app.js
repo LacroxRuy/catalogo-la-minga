@@ -403,7 +403,7 @@
           data-open-news="${index}"
           aria-label="Ampliar ${escapeHtml(item.title)}"
           title="Ver en pantalla completa"
-        >⛶</button>
+        ><span aria-hidden="true">⛶</span> Ampliar</button>
         <img
           src="${item.url}"
           alt="${escapeHtml(item.title)}"
@@ -963,7 +963,7 @@
     location.protocol.startsWith("http")
   ) {
     navigator.serviceWorker
-      .register("sw.js?v=9", { updateViaCache: "none" })
+      .register("sw.js?v=11", { updateViaCache: "none" })
       .then(registration => registration.update())
       .catch(() => {});
   }

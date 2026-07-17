@@ -160,3 +160,12 @@ Noticias y Ofertas
 
 La carpeta técnica continúa llamándose imagenes-novedades para mantener
 compatibilidad con los archivos ya cargados.
+
+
+CORRECCIÓN DE PRODUCTOS Y VISOR
+-------------------------------
+
+- Se corrigió la carga del catálogo.
+- El botón “Ampliar” quedó dentro de la imagen, abajo a la derecha.
+- También se puede abrir el visor tocando directamente la imagen.
+- El zoom se controla con +, −, 100%, doble toque y rueda del mouse.
