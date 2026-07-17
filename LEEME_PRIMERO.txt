@@ -20,8 +20,8 @@ QUÉ SE AGREGÓ
 1. Cada producto tiene un ID de imagen fijo.
 2. Se incluye MAPA_IMAGENES_PRODUCTOS.csv.
 3. Las imágenes de producto son cuadradas.
-4. Se agregó el botón Novedades junto a Ver productos y Consultar.
-5. Novedades oculta temporalmente el catálogo.
+4. Se agregó el botón Noticias y Ofertas junto a Ver productos y Consultar.
+5. Noticias y Ofertas oculta temporalmente el catálogo.
 6. El carrusel cambia automáticamente.
 7. También se puede mover con flechas, mouse o dedo.
 8. La cantidad de novedades se detecta automáticamente.
@@ -138,3 +138,25 @@ El botón Consultar abre WhatsApp con este texto precargado:
 Hola, quería consultarles acerca de:
 
 El cliente puede continuar escribiendo después de los dos puntos.
+
+
+VISOR DE NOVEDADES
+------------------
+
+- Clic o toque sobre la imagen para verla en pantalla completa.
+- Botón de ampliar en la esquina superior derecha.
+- Zoom con +, -, rueda del mouse o doble toque.
+- Arrastre de la imagen cuando está ampliada.
+- Flechas para recorrer las novedades sin cerrar el visor.
+- Escape o X para cerrar.
+
+
+CAMBIO DE NOMBRE
+----------------
+
+La opción visible “Novedades” pasó a llamarse:
+
+Noticias y Ofertas
+
+La carpeta técnica continúa llamándose imagenes-novedades para mantener
+compatibilidad con los archivos ya cargados.
